@@ -18,8 +18,9 @@ import org.jnativehook.NativeHookException;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
 import org.jnativehook.mouse.*;
+import com.google.gson.Gson;
 
-public class PatternBotController implements NativeMouseInputListener, NativeMouseMotionListener, NativeMouseWheelListener, NativeKeyListener
+public class AutoBotController implements NativeMouseInputListener, NativeMouseMotionListener, NativeMouseWheelListener, NativeKeyListener
 {
 	private boolean resetSaveKeyCode = false;
 	private int savePixelKeyCode = 29;
@@ -28,7 +29,7 @@ public class PatternBotController implements NativeMouseInputListener, NativeMou
 	private PixelConstellationDao constellationDao;
 	private PixelContainer currentPixelContainer;
 
-	public PatternBotController(PatternBotView patternBotView, PixelConstellationDao constellationDao)
+	public AutoBotController(PatternBotView patternBotView, PixelConstellationDao constellationDao)
 	{
 		this.bot = Modbot.getInstance();
 		this.patternBotView = patternBotView;
@@ -100,7 +101,7 @@ public class PatternBotController implements NativeMouseInputListener, NativeMou
 			if (currentPixelContainer.isEmpty())
 			{
 			}
-			else if (!name.equals(""))
+			else if (!"".equals(name))
 			{
 				constellationDao.add(new PixelConstellation(name, currentPixelContainer));
 				currentPixelContainer = new PixelContainer();

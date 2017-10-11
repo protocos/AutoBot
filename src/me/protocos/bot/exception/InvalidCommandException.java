@@ -2,6 +2,10 @@ package me.protocos.bot.exception;
 
 public class InvalidCommandException extends RuntimeException
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3278569962674744205L;
 	private String command;
 	private int lineNumber;
 

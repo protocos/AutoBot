@@ -2,6 +2,10 @@ package me.protocos.bot.exception;
 
 public class InvalidPatternException extends RuntimeException
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4444662260483421602L;
 	private String command;
 	private int lineNumber;
 
