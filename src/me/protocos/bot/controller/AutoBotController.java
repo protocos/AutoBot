@@ -18,7 +18,6 @@ import org.jnativehook.NativeHookException;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
 import org.jnativehook.mouse.*;
-import com.google.gson.Gson;
 
 public class AutoBotController implements NativeMouseInputListener, NativeMouseMotionListener, NativeMouseWheelListener, NativeKeyListener
 {
